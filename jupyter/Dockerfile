@@ -91,6 +91,9 @@ RUN pip install -U \
   'calysto-scheme' \
   'scalation-kernel' \
   'jupyter-fortran-kernel' \
+  'hy' \
+  'calysto-hy' \
+  'hymn' \
   'sos' \
   'sos-notebook' \
   'sos-r'
