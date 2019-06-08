@@ -87,6 +87,7 @@ RUN julia -e 'import Pkg; Pkg.update()' && \
     fix-permissions $JULIA_PKGDIR $CONDA_DIR/share/jupyter
 
 RUN pip install -U \
+  'pillow' \
   'ggplot' \
   'calysto-scheme' \
   'scalation-kernel' \
