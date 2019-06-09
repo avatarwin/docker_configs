@@ -1,5 +1,5 @@
 run:
-	docker run -it -p 10000:8888 -e JUPYTER_ENABLE_LAB=yes \
+	docker run -d -p 10000:8888 -e JUPYTER_ENABLE_LAB=yes \
 		-v $(HOME)/notebooks:/home/jovyan \
 		narch/jupyter_image_1
 

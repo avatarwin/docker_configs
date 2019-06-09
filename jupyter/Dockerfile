@@ -11,10 +11,13 @@ ARG TEST_ONLY_BUILD
 
 USER root
 
+
 # R pre-requisites
 RUN apt-get update && \
   apt-get install -y --no-install-recommends \
   apt-utils \
+  leiningen \ 
+  clojure \
   fonts-dejavu \
   gfortran \
   gcc && \
@@ -92,9 +95,9 @@ RUN pip install -U \
   'calysto-scheme' \
   'scalation-kernel' \
   'jupyter-fortran-kernel' \
-  'hy' \
-  'calysto-hy' \
-  'hymn' \
   'sos' \
   'sos-notebook' \
   'sos-r'
+
+RUN git clone https://github.com/clojupyter/clojupyter /tmp/clojupyter && \
+	cd /tmp/clojupyter && make install
